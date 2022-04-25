@@ -2,7 +2,7 @@ class Solution {
 public:
     unordered_set<int>set;
     vector<int>vis;
-    void solve(vector<vector<int>>&rooms, int i){
+    void solve(vector<vector<int>>rooms, int i){
         vis[i] = 1;
         set.insert(i);
         for(auto it: rooms[i]){
