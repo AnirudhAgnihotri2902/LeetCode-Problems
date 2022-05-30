@@ -4,7 +4,6 @@ public:
         if (dividend == INT_MIN && divisor == -1) {
             return INT_MAX;
         }
-        long long int ans = dividend/divisor;
-        return ans;
+        return dividend/divisor;
     }
 };
