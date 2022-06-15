@@ -25,7 +25,7 @@ public:
     }
     int longestStrChain(vector<string>& words) {
         sort(words.begin(),words.end(),cmp);
-        int n(words.size());
+        int n(words.size()), res(1);
         vector<int> ans(n,1);
         for(int i = 0; i < n; i++){
             // int tem = 1;
@@ -36,9 +36,10 @@ public:
                         ans[j] = max(1 + ans[i], ans[j]);
                         // cout<<words[i]<<" "<<words[j]<<"\n";
                     }
+                    res = max(res,ans[j]);
                 }
             }
         }
-        return *max_element(ans.begin(),ans.end());
+        return res;
     }
 };
