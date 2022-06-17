@@ -11,9 +11,6 @@
  */
 class Solution {
 public:
-    //0 covered 
-    //1 has cover
-    //2 please cover
     int count = 0;
     int postorder(TreeNode* root){
         if(root == NULL){
