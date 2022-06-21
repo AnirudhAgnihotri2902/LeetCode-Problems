@@ -17,7 +17,7 @@ public:
                         bricks+=queue.top();
                         queue.pop();
                     }
-                    else if(bricks<0 || ladders<=0){
+                    else{
                         return index-1;
                     }
                 }
