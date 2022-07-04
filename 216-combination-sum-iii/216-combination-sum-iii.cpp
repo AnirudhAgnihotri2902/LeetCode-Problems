@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<vector<int>>res;
-    void solution(int i, int k, int n, vector<int>arr){
+    void solution(int i, int k, int n, vector<int>&arr){
         if(n<0){
             return;
         }
@@ -19,6 +19,7 @@ public:
         solution(i+1, k,n,arr);
         arr.push_back(i);
         solution(i+1,k,n-i,arr);
+        arr.pop_back();
     }
     vector<int>arr;
     vector<vector<int>> combinationSum3(int k, int n) {
