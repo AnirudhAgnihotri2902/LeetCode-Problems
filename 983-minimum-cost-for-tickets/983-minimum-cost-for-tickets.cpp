@@ -1,7 +1,7 @@
 class Solution {
 public:
     int solve(int day, vector<int>& days, vector<int>& costs, vector<int>&map, vector<int>&dp){
-        if(day>365){
+        if(day>last){
             return 0;
         }
         if(dp[day]!=-1){
@@ -16,9 +16,11 @@ public:
         return dp[day] = min({first, second, third});
         
     }
+    int last;
     int mincostTickets(vector<int>& days, vector<int>& costs) {
+        last = days[days.size()-1];
         vector<int>dp(366,-1);
-        vector<int>map(366,0);
+        vector<int>map(last+1,0);
         for(int i = 0; i<days.size(); i++){
             map[days[i]]++;
         }
