@@ -28,7 +28,7 @@ public:
                 if(grid[i][j] == 1 && aux[i][j] == 0){
                     solve(grid,i,j);
                     ans = max(count,ans);
-                    cout<<count<<endl;
+                    //cout<<count<<endl;
                     count = 0;
                 }
             }
