@@ -34,7 +34,7 @@ public:
         sufsum = maxi;
         sufsum%=mod;
         long long int ans;
-        cout<<presum<<" "<<sufsum<<" "<<sum<<endl;
+        //cout<<presum<<" "<<sufsum<<" "<<sum<<endl;
         if(k == 1){
             return res;
         }
