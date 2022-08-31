@@ -1,7 +1,7 @@
 class Solution {
 public:
     void dfs(int node, vector<vector<int>> &graph, vector<int> &visited, bool &cycle) {
-        cout<<node<<endl;
+        //cout<<node<<endl;
         if (visited[node] == 1){
             cycle = true; 
             return;
