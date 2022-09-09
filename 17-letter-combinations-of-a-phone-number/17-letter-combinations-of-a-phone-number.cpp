@@ -2,7 +2,6 @@ class Solution {
 public:
     unordered_map<char, vector<char>>map;
     vector<string>ans;
-    
     void solve(string &digits, int i, int n, string s){
         if(i == n){
             if(s == ""){
@@ -15,7 +14,6 @@ public:
             solve(digits, i+1, n,s+itr);
         }
     }
-    
     vector<string> letterCombinations(string digits) {
         map['2'] = {'a','b','c'};
         map['3'] = {'d','e','f'};
@@ -28,7 +26,6 @@ public:
         int n = digits.size();
         string s = "";
         solve(digits, 0, n ,s);
-        
         return ans;
     }
 };
