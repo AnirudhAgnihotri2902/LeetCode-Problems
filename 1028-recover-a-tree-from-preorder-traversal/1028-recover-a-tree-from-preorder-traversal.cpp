@@ -13,7 +13,7 @@ class Solution {
 public:
     int i = 0;
     int solve(TreeNode* root, int level, string &str){
-        cout<<level<<endl;
+        // cout<<level<<endl;
         if(i >= str.size()){
             return 0;
         }
@@ -23,7 +23,7 @@ public:
             i++;
         }
         int num = stoi(temp);
-        cout<<num<<endl;
+        // cout<<num<<endl;
         TreeNode* tem = new TreeNode(num);
         root->left = tem;
         int count = 0;
@@ -31,7 +31,7 @@ public:
             count++;
             i++;
         }
-        cout<<"Count"<<count<<endl;
+        // cout<<"Count"<<count<<endl;
         if(count<level)return count;
         if(count>level){
             int newlevel = solve(tem, count, str);
