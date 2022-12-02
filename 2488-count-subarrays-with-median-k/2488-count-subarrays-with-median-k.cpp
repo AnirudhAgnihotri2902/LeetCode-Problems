@@ -1,7 +1,7 @@
 class Solution {
 public:
     int countSubarrays(vector<int>& nums, int k) {
-        map<int, int> c;
+        unordered_map<int, int> c;
         c[0] = 1;
         bool flag = false;
         int sum = 0;
